@@ -1,0 +1,69 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 82.67     63.08    63.08                             longest_match
+  6.42     67.98     4.90                             deflate_slow
+  3.34     70.53     2.55                             inflate_fast
+  1.97     72.03     1.50                             compress_block
+  1.55     73.21     1.18                             crc32_little
+  1.47     74.33     1.12  8186939     0.00     0.00  FastqHandler::judgeTheSeq(dnaSeq&)
+  1.45     75.43     1.11                             fill_window
+  0.22     75.60     0.17                             gzgets
+  0.20     75.75     0.15 32747757     0.00     0.00  FastqHandler::gz_getline(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
+  0.18     75.88     0.14  8186940     0.00     0.00  FastqHandler::gz_readSeq(dnaSeq&)
+  0.14     75.99     0.11                             inflate
+  0.10     76.07     0.08                             build_tree
+  0.09     76.14     0.07                             gz_write
+  0.07     76.19     0.05        1     0.05     1.48  FastqHandler::filter(unsigned int, double)
+  0.05     76.23     0.04                             inflate_table
+  0.03     76.26     0.03  6360313     0.00     0.00  FastqHandler::gz_writeSeq(dnaSeq&)
+  0.02     76.27     0.02                             gzclose_w
+  0.01     76.28     0.01                             _tr_flush_bits
+  0.01     76.29     0.01                             _tr_stored_block
+  0.01     76.30     0.01                             gz_zero
+  0.01     76.31     0.01                             gzungetc
+  0.00     76.31     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN12FastqHandlerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+  0.00     76.31     0.00        1     0.00     0.00  _GLOBAL__sub_I_main
+  0.00     76.31     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00     76.31     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00     76.31     0.00        1     0.00     0.00  FastqHandler::getParrentPath(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     76.31     0.00        1     0.00     0.00  FastqHandler::FastqHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     76.31     0.00        1     0.00     0.00  FastqHandler::~FastqHandler()
+  0.00     76.31     0.00        1     0.00     0.00  std::setprecision(int)
+  0.00     76.31     0.00        1     0.00     0.00  std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)
+  0.00     76.31     0.00        1     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char const*)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2015 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.

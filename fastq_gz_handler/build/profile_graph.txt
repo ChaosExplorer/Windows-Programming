@@ -1,0 +1,497 @@
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.01% of 117.99 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00  117.99                 main [1]
+                0.00  117.99       1/1           FastqHandler::filter(unsigned int, double) [2]
+                0.00    0.00       1/1           FastqHandler::~FastqHandler() [42]
+                0.00    0.00       1/1           FastqHandler::FastqHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [158]
+-----------------------------------------------
+                0.00  117.99       1/1           main [1]
+[2]    100.0    0.00  117.99       1         FastqHandler::filter(unsigned int, double) [2]
+                0.02  109.04 5259935/5259935     FastqHandler::gz_wrieSeq(dnaSeq&) [3]
+                0.17    7.20 8186940/8186940     FastqHandler::gz_readSeq(dnaSeq&) [10]
+                1.57    0.00 8186939/8186939     FastqHandler::judgeTheSeq(dnaSeq&) [21]
+                0.00    0.00       1/1           std::setprecision(int) [159]
+-----------------------------------------------
+                0.02  109.04 5259935/5259935     FastqHandler::filter(unsigned int, double) [2]
+[3]     92.4    0.02  109.04 5259935         FastqHandler::gz_wrieSeq(dnaSeq&) [3]
+                0.03  109.01 21039740/21039740     gzputs [4]
+-----------------------------------------------
+                0.03  109.01 21039740/21039740     FastqHandler::gz_wrieSeq(dnaSeq&) [3]
+[4]     92.4    0.03  109.01 21039740         gzputs [4]
+                0.16  108.85 21039740/21039740     gz_write [5]
+-----------------------------------------------
+                0.16  108.85 21039740/21039740     gzputs [4]
+[5]     92.4    0.16  108.85 21039740         gz_write [5]
+                0.00  108.84   85537/85538       gz_comp [6]
+                0.00    0.01       1/1           gz_init [40]
+-----------------------------------------------
+                0.00    0.00       1/85538       gzclose_w [41]
+                0.00  108.84   85537/85538       gz_write [5]
+[6]     92.2    0.00  108.84   85538         gz_comp [6]
+                0.01  108.82  111325/111325      deflate [7]
+                0.00    0.01       1/2           deflateReset [35]
+-----------------------------------------------
+                0.01  108.82  111325/111325      gz_comp [6]
+[7]     92.2    0.01  108.82  111325         deflate [7]
+                9.10   99.72   91191/91191       deflate_slow [8]
+                0.00    0.00       1/170874      crc32 [22]
+                0.00    0.00  111325/111328      deflateStateCheck [45]
+                0.00    0.00   20134/25788       flush_pending [51]
+-----------------------------------------------
+                9.10   99.72   91191/91191       deflate [7]
+[8]     92.2    9.10   99.72   91191         deflate_slow [8]
+               92.19    0.00 135725603/135725603     longest_match [9]
+                0.01    4.13  171137/171137      fill_window [17]
+                0.03    2.44    5654/5654        _tr_flush_block [19]
+                0.78    0.00 92616228/92616228     _tr_tally [27]
+                0.14    0.00 61613127/61613127     check_match [28]
+                0.00    0.00    5654/25788       flush_pending [51]
+-----------------------------------------------
+               92.19    0.00 135725603/135725603     deflate_slow [8]
+[9]     78.1   92.19    0.00 135725603         longest_match [9]
+-----------------------------------------------
+                0.17    7.20 8186940/8186940     FastqHandler::filter(unsigned int, double) [2]
+[10]     6.2    0.17    7.20 8186940         FastqHandler::gz_readSeq(dnaSeq&) [10]
+                0.19    7.01 32747757/32747757     FastqHandler::gz_getline(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [11]
+-----------------------------------------------
+                0.19    7.01 32747757/32747757     FastqHandler::gz_readSeq(dnaSeq&) [10]
+[11]     6.1    0.19    7.01 32747757         FastqHandler::gz_getline(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [11]
+                0.36    6.65 32747757/32747757     gzgets [12]
+-----------------------------------------------
+                0.36    6.65 32747757/32747757     FastqHandler::gz_getline(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [11]
+[12]     5.9    0.36    6.65 32747757         gzgets [12]
+                0.00    6.65   51885/51885       gz_fetch [13]
+-----------------------------------------------
+                0.00    6.65   51885/51885       gzgets [12]
+[13]     5.6    0.00    6.65   51885         gz_fetch [13]
+                0.01    6.64   51884/51884       gz_decomp [14]
+                0.00    0.00      28/28          gz_look [55]
+-----------------------------------------------
+                0.01    6.64   51884/51884       gz_fetch [13]
+[14]     5.6    0.01    6.64   51884         gz_decomp [14]
+                0.18    6.46   85253/85253       inflate [15]
+                0.00    0.00   33407/33409       gz_avail [48]
+-----------------------------------------------
+                0.18    6.46   85253/85253       gz_decomp [14]
+[15]     5.6    0.18    6.46   85253         inflate [15]
+                5.57    0.00  113993/113993      inflate_fast [16]
+                0.00    0.78   85333/170874      crc32 [22]
+                0.11    0.00   38370/38370       inflate_table [30]
+                0.00    0.00   85253/85311       inflateStateCheck [46]
+                0.00    0.00   85252/85252       updatewindow [47]
+                0.00    0.00    2480/2480        fixedtables [54]
+-----------------------------------------------
+                5.57    0.00  113993/113993      inflate [15]
+[16]     4.7    5.57    0.00  113993         inflate_fast [16]
+-----------------------------------------------
+                0.01    4.13  171137/171137      deflate_slow [8]
+[17]     3.5    0.01    4.13  171137         fill_window [17]
+                3.34    0.00   21383/21383       slide_hash [18]
+                0.00    0.79   85538/85538       read_buf [26]
+-----------------------------------------------
+                3.34    0.00   21383/21383       fill_window [17]
+[18]     2.8    3.34    0.00   21383         slide_hash [18]
+-----------------------------------------------
+                0.03    2.44    5654/5654        deflate_slow [8]
+[19]     2.1    0.03    2.44    5654         _tr_flush_block [19]
+                1.06    1.23    5654/5654        compress_block [20]
+                0.02    0.07   11308/16962       build_tree [29]
+                0.00    0.05    5654/5654        build_bl_tree [32]
+                0.00    0.01    5654/5654        send_all_trees [37]
+                0.00    0.00    5654/230241616     send_bits [25]
+                0.00    0.00    5654/5656        init_block [53]
+                0.00    0.00       1/1           detect_data_type [67]
+                0.00    0.00       1/1           bi_windup [65]
+-----------------------------------------------
+                1.06    1.23    5654/5654        _tr_flush_block [19]
+[20]     1.9    1.06    1.23    5654         compress_block [20]
+                1.23    0.00 229620962/230241616     send_bits [25]
+-----------------------------------------------
+                1.57    0.00 8186939/8186939     FastqHandler::filter(unsigned int, double) [2]
+[21]     1.3    1.57    0.00 8186939         FastqHandler::judgeTheSeq(dnaSeq&) [21]
+-----------------------------------------------
+                0.00    0.00       1/170874      deflate [7]
+                0.00    0.00       2/170874      deflateResetKeep [43]
+                0.00    0.78   85333/170874      inflate [15]
+                0.00    0.79   85538/170874      read_buf [26]
+[22]     1.3    0.00    1.57  170874         crc32 [22]
+                0.00    1.57  170874/170874      crc32_z [23]
+-----------------------------------------------
+                0.00    1.57  170874/170874      crc32 [22]
+[23]     1.3    0.00    1.57  170874         crc32_z [23]
+                1.57    0.00  170817/170817      crc32_little [24]
+-----------------------------------------------
+                1.57    0.00  170817/170817      crc32_z [23]
+[24]     1.3    1.57    0.00  170817         crc32_little [24]
+-----------------------------------------------
+                0.00    0.00    5654/230241616     _tr_flush_block [19]
+                0.00    0.00  102696/230241616     send_all_trees [37]
+                0.00    0.00  512304/230241616     send_tree [38]
+                1.23    0.00 229620962/230241616     compress_block [20]
+[25]     1.0    1.23    0.00 230241616         send_bits [25]
+-----------------------------------------------
+                0.00    0.79   85538/85538       fill_window [17]
+[26]     0.7    0.00    0.79   85538         read_buf [26]
+                0.00    0.79   85538/170874      crc32 [22]
+-----------------------------------------------
+                0.78    0.00 92616228/92616228     deflate_slow [8]
+[27]     0.7    0.78    0.00 92616228         _tr_tally [27]
+-----------------------------------------------
+                0.14    0.00 61613127/61613127     deflate_slow [8]
+[28]     0.1    0.14    0.00 61613127         check_match [28]
+-----------------------------------------------
+                0.01    0.04    5654/16962       build_bl_tree [32]
+                0.02    0.07   11308/16962       _tr_flush_block [19]
+[29]     0.1    0.03    0.11   16962         build_tree [29]
+                0.05    0.00 1293598/1293598     pqdownheap [31]
+                0.03    0.00   16962/16962       gen_bitlen [33]
+                0.03    0.00   16962/16962       gen_codes [34]
+-----------------------------------------------
+                0.11    0.00   38370/38370       inflate [15]
+[30]     0.1    0.11    0.00   38370         inflate_table [30]
+-----------------------------------------------
+                0.05    0.00 1293598/1293598     build_tree [29]
+[31]     0.0    0.05    0.00 1293598         pqdownheap [31]
+-----------------------------------------------
+                0.00    0.05    5654/5654        _tr_flush_block [19]
+[32]     0.0    0.00    0.05    5654         build_bl_tree [32]
+                0.01    0.04    5654/16962       build_tree [29]
+                0.00    0.00   11308/11308       scan_tree [52]
+-----------------------------------------------
+                0.03    0.00   16962/16962       build_tree [29]
+[33]     0.0    0.03    0.00   16962         gen_bitlen [33]
+-----------------------------------------------
+                0.03    0.00   16962/16962       build_tree [29]
+[34]     0.0    0.03    0.00   16962         gen_codes [34]
+                0.00    0.00  533003/533003      bi_reverse [44]
+-----------------------------------------------
+                0.00    0.01       1/2           gz_comp [6]
+                0.00    0.01       1/2           deflateInit2_ [39]
+[35]     0.0    0.00    0.02       2         deflateReset [35]
+                0.02    0.00       2/2           lm_init [36]
+                0.00    0.00       2/2           deflateResetKeep [43]
+-----------------------------------------------
+                0.02    0.00       2/2           deflateReset [35]
+[36]     0.0    0.02    0.00       2         lm_init [36]
+-----------------------------------------------
+                0.00    0.01    5654/5654        _tr_flush_block [19]
+[37]     0.0    0.00    0.01    5654         send_all_trees [37]
+                0.01    0.00   11308/11308       send_tree [38]
+                0.00    0.00  102696/230241616     send_bits [25]
+-----------------------------------------------
+                0.01    0.00   11308/11308       send_all_trees [37]
+[38]     0.0    0.01    0.00   11308         send_tree [38]
+                0.00    0.00  512304/230241616     send_bits [25]
+-----------------------------------------------
+                0.00    0.01       1/1           gz_init [40]
+[39]     0.0    0.00    0.01       1         deflateInit2_ [39]
+                0.00    0.01       1/2           deflateReset [35]
+                0.00    0.00       5/7           zcalloc [58]
+-----------------------------------------------
+                0.00    0.01       1/1           gz_write [5]
+[40]     0.0    0.00    0.01       1         gz_init [40]
+                0.00    0.01       1/1           deflateInit2_ [39]
+-----------------------------------------------
+                0.00    0.00       1/1           FastqHandler::~FastqHandler() [42]
+[41]     0.0    0.00    0.00       1         gzclose_w [41]
+                0.00    0.00       1/85538       gz_comp [6]
+                0.00    0.00       1/1           deflateEnd [66]
+                0.00    0.00       1/4           gz_error [60]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[42]     0.0    0.00    0.00       1         FastqHandler::~FastqHandler() [42]
+                0.00    0.00       1/1           gzclose_w [41]
+                0.00    0.00       1/1           gzclose_r [68]
+-----------------------------------------------
+                0.00    0.00       2/2           deflateReset [35]
+[43]     0.0    0.00    0.00       2         deflateResetKeep [43]
+                0.00    0.00       2/170874      crc32 [22]
+                0.00    0.00       2/111328      deflateStateCheck [45]
+                0.00    0.00       2/2           _tr_init [152]
+-----------------------------------------------
+                0.00    0.00  533003/533003      gen_codes [34]
+[44]     0.0    0.00    0.00  533003         bi_reverse [44]
+-----------------------------------------------
+                0.00    0.00       1/111328      deflateEnd [66]
+                0.00    0.00       2/111328      deflateResetKeep [43]
+                0.00    0.00  111325/111328      deflate [7]
+[45]     0.0    0.00    0.00  111328         deflateStateCheck [45]
+-----------------------------------------------
+                0.00    0.00       1/85311       inflateReset2 [71]
+                0.00    0.00       1/85311       inflateEnd [69]
+                0.00    0.00      28/85311       inflateResetKeep [57]
+                0.00    0.00      28/85311       inflateReset [56]
+                0.00    0.00   85253/85311       inflate [15]
+[46]     0.0    0.00    0.00   85311         inflateStateCheck [46]
+-----------------------------------------------
+                0.00    0.00   85252/85252       inflate [15]
+[47]     0.0    0.00    0.00   85252         updatewindow [47]
+                0.00    0.00       1/7           zcalloc [58]
+-----------------------------------------------
+                0.00    0.00       2/33409       gz_look [55]
+                0.00    0.00   33407/33409       gz_decomp [14]
+[48]     0.0    0.00    0.00   33409         gz_avail [48]
+                0.00    0.00   33408/33408       gz_load [49]
+-----------------------------------------------
+                0.00    0.00   33408/33408       gz_avail [48]
+[49]     0.0    0.00    0.00   33408         gz_load [49]
+-----------------------------------------------
+                0.00    0.00   25788/25788       _tr_flush_bits [151]
+[50]     0.0    0.00    0.00   25788         bi_flush [50]
+-----------------------------------------------
+                0.00    0.00    5654/25788       deflate_slow [8]
+                0.00    0.00   20134/25788       deflate [7]
+[51]     0.0    0.00    0.00   25788         flush_pending [51]
+                0.00    0.00   25788/25788       _tr_flush_bits [151]
+-----------------------------------------------
+                0.00    0.00   11308/11308       build_bl_tree [32]
+[52]     0.0    0.00    0.00   11308         scan_tree [52]
+-----------------------------------------------
+                0.00    0.00       2/5656        _tr_init [152]
+                0.00    0.00    5654/5656        _tr_flush_block [19]
+[53]     0.0    0.00    0.00    5656         init_block [53]
+-----------------------------------------------
+                0.00    0.00    2480/2480        inflate [15]
+[54]     0.0    0.00    0.00    2480         fixedtables [54]
+-----------------------------------------------
+                0.00    0.00      28/28          gz_fetch [13]
+[55]     0.0    0.00    0.00      28         gz_look [55]
+                0.00    0.00      27/28          inflateReset [56]
+                0.00    0.00       2/33409       gz_avail [48]
+                0.00    0.00       1/1           inflateInit2_ [70]
+-----------------------------------------------
+                0.00    0.00       1/28          inflateReset2 [71]
+                0.00    0.00      27/28          gz_look [55]
+[56]     0.0    0.00    0.00      28         inflateReset [56]
+                0.00    0.00      28/85311       inflateStateCheck [46]
+                0.00    0.00      28/28          inflateResetKeep [57]
+-----------------------------------------------
+                0.00    0.00      28/28          inflateReset [56]
+[57]     0.0    0.00    0.00      28         inflateResetKeep [57]
+                0.00    0.00      28/85311       inflateStateCheck [46]
+-----------------------------------------------
+                0.00    0.00       1/7           inflateInit2_ [70]
+                0.00    0.00       1/7           updatewindow [47]
+                0.00    0.00       5/7           deflateInit2_ [39]
+[58]     0.0    0.00    0.00       7         zcalloc [58]
+-----------------------------------------------
+                0.00    0.00       2/7           inflateEnd [69]
+                0.00    0.00       5/7           deflateEnd [66]
+[59]     0.0    0.00    0.00       7         zcfree [59]
+-----------------------------------------------
+                0.00    0.00       1/4           gzclose_r [68]
+                0.00    0.00       1/4           gzclose_w [41]
+                0.00    0.00       2/4           gz_reset [62]
+[60]     0.0    0.00    0.00       4         gz_error [60]
+-----------------------------------------------
+                0.00    0.00       2/2           gzopen [63]
+[61]     0.0    0.00    0.00       2         gz_open [61]
+                0.00    0.00       2/2           gz_reset [62]
+-----------------------------------------------
+                0.00    0.00       2/2           gz_open [61]
+[62]     0.0    0.00    0.00       2         gz_reset [62]
+                0.00    0.00       2/4           gz_error [60]
+-----------------------------------------------
+                0.00    0.00       2/2           FastqHandler::FastqHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [158]
+[63]     0.0    0.00    0.00       2         gzopen [63]
+                0.00    0.00       2/2           gz_open [61]
+-----------------------------------------------
+                0.00    0.00       2/2           _tr_init [152]
+[64]     0.0    0.00    0.00       2         tr_static_init [64]
+-----------------------------------------------
+                0.00    0.00       1/1           _tr_flush_block [19]
+[65]     0.0    0.00    0.00       1         bi_windup [65]
+-----------------------------------------------
+                0.00    0.00       1/1           gzclose_w [41]
+[66]     0.0    0.00    0.00       1         deflateEnd [66]
+                0.00    0.00       5/7           zcfree [59]
+                0.00    0.00       1/111328      deflateStateCheck [45]
+-----------------------------------------------
+                0.00    0.00       1/1           _tr_flush_block [19]
+[67]     0.0    0.00    0.00       1         detect_data_type [67]
+-----------------------------------------------
+                0.00    0.00       1/1           FastqHandler::~FastqHandler() [42]
+[68]     0.0    0.00    0.00       1         gzclose_r [68]
+                0.00    0.00       1/1           inflateEnd [69]
+                0.00    0.00       1/4           gz_error [60]
+-----------------------------------------------
+                0.00    0.00       1/1           gzclose_r [68]
+[69]     0.0    0.00    0.00       1         inflateEnd [69]
+                0.00    0.00       2/7           zcfree [59]
+                0.00    0.00       1/85311       inflateStateCheck [46]
+-----------------------------------------------
+                0.00    0.00       1/1           gz_look [55]
+[70]     0.0    0.00    0.00       1         inflateInit2_ [70]
+                0.00    0.00       1/7           zcalloc [58]
+                0.00    0.00       1/1           inflateReset2 [71]
+-----------------------------------------------
+                0.00    0.00       1/1           inflateInit2_ [70]
+[71]     0.0    0.00    0.00       1         inflateReset2 [71]
+                0.00    0.00       1/85311       inflateStateCheck [46]
+                0.00    0.00       1/28          inflateReset [56]
+-----------------------------------------------
+                0.00    0.00   25788/25788       flush_pending [51]
+[151]    0.0    0.00    0.00   25788         _tr_flush_bits [151]
+                0.00    0.00   25788/25788       bi_flush [50]
+-----------------------------------------------
+                0.00    0.00       2/2           deflateResetKeep [43]
+[152]    0.0    0.00    0.00       2         _tr_init [152]
+                0.00    0.00       2/2           tr_static_init [64]
+                0.00    0.00       2/5656        init_block [53]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [167]
+[153]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN12FastqHandlerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [153]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [156]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [167]
+[154]    0.0    0.00    0.00       1         _GLOBAL__sub_I_main [154]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [155]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [154]
+[155]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [155]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN12FastqHandlerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [153]
+[156]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [156]
+-----------------------------------------------
+                0.00    0.00       1/1           FastqHandler::FastqHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [158]
+[157]    0.0    0.00    0.00       1         FastqHandler::getParrentPath(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [157]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[158]    0.0    0.00    0.00       1         FastqHandler::FastqHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [158]
+                0.00    0.00       2/2           gzopen [63]
+                0.00    0.00       1/1           FastqHandler::getParrentPath(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [157]
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char const*) [161]
+-----------------------------------------------
+                0.00    0.00       1/1           FastqHandler::filter(unsigned int, double) [2]
+[159]    0.0    0.00    0.00       1         std::setprecision(int) [159]
+-----------------------------------------------
+                0.00    0.00       1/1           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char const*) [161]
+[160]    0.0    0.00    0.00       1         std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [160]
+-----------------------------------------------
+                0.00    0.00       1/1           FastqHandler::FastqHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [158]
+[161]    0.0    0.00    0.00       1         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char const*) [161]
+                0.00    0.00       1/1           std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [160]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2015 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [153] _GLOBAL__sub_I__ZN12FastqHandlerC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (FastqHandler.cpp) [24] crc32_little (crc32.c) [41] gzclose_w
+ [154] _GLOBAL__sub_I_main (main.cpp) [23] crc32_z        [12] gzgets
+ [155] __static_initialization_and_destruction_0(int, int) (main.cpp) [7] deflate [63] gzopen
+ [156] __static_initialization_and_destruction_0(int, int) (FastqHandler.cpp) [66] deflateEnd [4] gzputs
+  [11] FastqHandler::gz_getline(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [39] deflateInit2_ [15] inflate
+  [10] FastqHandler::gz_readSeq(dnaSeq&) [35] deflateReset [69] inflateEnd
+   [3] FastqHandler::gz_writeSeq(dnaSeq&) [43] deflateResetKeep [70] inflateInit2_
+  [21] FastqHandler::judgeTheSeq(dnaSeq&) [45] deflateStateCheck (deflate.c) [56] inflateReset
+ [157] FastqHandler::getParrentPath(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [8] deflate_slow (deflate.c) [71] inflateReset2
+   [2] FastqHandler::filter(unsigned int, double) [67] detect_data_type (trees.c) [57] inflateResetKeep
+ [158] FastqHandler::FastqHandler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [17] fill_window (deflate.c) [46] inflateStateCheck (inflate.c)
+  [42] FastqHandler::~FastqHandler() [54] fixedtables (inflate.c) [16] inflate_fast
+ [159] std::setprecision(int) [51] flush_pending (deflate.c) [30] inflate_table
+ [160] std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) [33] gen_bitlen (trees.c) [53] init_block (trees.c)
+ [161] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char const*) [34] gen_codes (trees.c) [36] lm_init (deflate.c)
+ [151] _tr_flush_bits         [48] gz_avail (gzread.c)     [9] longest_match (deflate.c)
+  [19] _tr_flush_block         [6] gz_comp (gzwrite.c)    [31] pqdownheap (trees.c)
+ [152] _tr_init               [14] gz_decomp (gzread.c)   [26] read_buf (deflate.c)
+  [27] _tr_tally              [60] gz_error               [52] scan_tree (trees.c)
+  [50] bi_flush (trees.c)     [13] gz_fetch (gzread.c)    [37] send_all_trees (trees.c)
+  [44] bi_reverse (trees.c)   [40] gz_init (gzwrite.c)    [25] send_bits (trees.c)
+  [65] bi_windup (trees.c)    [49] gz_load (gzread.c)     [38] send_tree (trees.c)
+  [32] build_bl_tree (trees.c) [55] gz_look (gzread.c)    [18] slide_hash (deflate.c)
+  [29] build_tree (trees.c)   [61] gz_open (gzlib.c)      [64] tr_static_init (trees.c)
+  [28] check_match (deflate.c) [62] gz_reset (gzlib.c)    [47] updatewindow (inflate.c)
+  [20] compress_block (trees.c) [5] gz_write (gzwrite.c)  [58] zcalloc
+  [22] crc32                  [68] gzclose_r              [59] zcfree

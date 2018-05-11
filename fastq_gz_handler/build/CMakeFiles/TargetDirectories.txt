@@ -1,0 +1,3 @@
+/home/chaos/projects/bgi_practice/fastq_gz_handler/build/CMakeFiles/edit_cache.dir
+/home/chaos/projects/bgi_practice/fastq_gz_handler/build/CMakeFiles/rebuild_cache.dir
+/home/chaos/projects/bgi_practice/fastq_gz_handler/build/CMakeFiles/fastq_gz_handler.dir
