@@ -28,21 +28,21 @@ typedef struct SamOptField {
     int xm;
     int xo;
     int xg;
-    string md;
+    char md[7];
 } *psamopt;
 
 typedef struct SamLine {
-    string seqName;
+    char seqName[28];
     uint flag;
-    string RefName;
+    char RefName[8];
     uint RefPos;
     uint mapQ;
-    string cicarStr;
-    string mateRefName;
+    char cicarStr[8];
+    char mateRefName[8];
     uint mateRefPos;
     int tLen;
-    string readSeq;
-    string readQual;
+    char readSeq[35];
+    char readQual[35];
     SamOptField optField;
 } *psamLine;
 

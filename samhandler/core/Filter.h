@@ -19,6 +19,8 @@ public:
     Filter(FilterStandard& cond): _cond(cond) {}
 
     void goForAll(char *buffer, sortIndecVec &indecVec, StasticsData &stat);
+
+    bool checkRecord(char* record, SamSortIndex& index, SamLine& line);
 };
 
 
