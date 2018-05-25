@@ -7,14 +7,26 @@
 
 #include "Repository.h"
 #include <string>
+#include <fstream>
+#include <iostream>
 using std::string;
 
 class Samwriter {
     string _outPath;
-public:
-    Samwriter(const string& outputPath): _outPath(outputPath){};
+    std::ofstream _out;
 
-    void writeAll (char* buffer, sortIndecVec& indecVec);
+public:
+    Samwriter(const string& outputPath): _outPath(outputPath) //, _out(std::ofstream(outputPath))
+    {
+        _out.open(_outPath, std::ofstream::out);
+    }
+
+    ~Samwriter()
+    {
+       _out.close();
+    }
+
+    void writeAll(char *buffer, const sortIndecVec &indecVec, const off64_t header_endPos);
 
     void writePart (char* buffer, uint size);
 };

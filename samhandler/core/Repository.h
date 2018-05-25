@@ -11,8 +11,9 @@
 #include <string>
 #include <map>
 #include <vector>
-#include <tuple>
 
+#define READ_BUFF_SIZE 2500000000
+#define PREDIC_ITEM_NUM 10000000
 using std::string;
 
 typedef struct SamHeader {
@@ -50,23 +51,26 @@ typedef struct SamSortIndex {
     uint index;
     uint endPos;
 
-    std::tuple<uint, uint, uint, uint>  _key;
-
-    /*uint chromosome;
+    uint chromosome;
     uint chrPos;
     uint mapQ;
     uint id;
 
     bool operator<=(const SamSortIndex& comp) {
-        if (this->chromosome < comp.chromosome)
-            return true;
-        else if (this->chromosome = comp.chromosome) {
-            if (this->chrPos < comp.chrPos)
-                return true;
+        if (chromosome == comp.chromosome) {
+            if (chrPos == comp.chrPos) {
+                if (mapQ == comp.mapQ) {
+                    if (id == comp.id)
+                        return true;
+                    else
+                        return id < comp.id;
+                }
+                return mapQ < comp.mapQ;
+            }
+            return chrPos < comp.chrPos;
         }
-        else
-            return false;
-    }*/
+        return chromosome < comp.chromosome;
+    }
 } *pSamSortIndex;
 
 typedef std::vector<SamSortIndex>  sortIndecVec;
@@ -78,7 +82,7 @@ typedef struct StasticsData {
     uint xtR;
     uint minMapQ;
     uint maxMapQ;
-    StasticsData(): sum(0),effectiveSum(0), xtU(0), xtR(0), minMapQ(0), maxMapQ(0) {}
+    StasticsData(): sum(0),effectiveSum(0), xtU(0), xtR(0), minMapQ(40), maxMapQ(0) {}
 } *pstastics;
 
 class MapRepository {

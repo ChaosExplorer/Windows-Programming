@@ -14,5 +14,5 @@ aux_source_directory(. ROOT_DIR_SRCS)
 add_executable(samhandler ${ROOT_DIR_SRCS})
 target_link_libraries(samhandler samtoolcore)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pg -lc -pthread")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg -lc")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pg -lc -g -pthread")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg -lc -g")

@@ -18,7 +18,7 @@ class Filter{
 public:
     Filter(FilterStandard& cond): _cond(cond) {}
 
-    void goForAll(char *buffer, sortIndecVec &indecVec, StasticsData &stat);
+    void goForAll(char *buffer, sortIndecVec &indecVec, StasticsData &stat, off64_t &header_endPos);
 
     bool checkRecord(char* record, SamSortIndex& index, SamLine& line);
 };
