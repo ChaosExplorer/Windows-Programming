@@ -1,3 +1,0 @@
-/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/CMakeFiles/rebuild_cache.dir
-/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/CMakeFiles/edit_cache.dir
-/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/CMakeFiles/SOAPnuke.dir

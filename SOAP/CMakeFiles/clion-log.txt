@@ -1,9 +1,0 @@
-/home/chaos/Tools/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src
--- boost_system: /usr/lib/x86_64-linux-gnu/libboost_system.a
--- boost_thread: /usr/lib/x86_64-linux-gnu/libboost_thread.a
--- crtpto: /usr/lib/x86_64-linux-gnu/libcrypto.a
--- zlib: /usr/local/lib/libz.a
--- log4cplus: /usr/lib/x86_64-linux-gnu/liblog4cplus.a
--- Configuring done
--- Generating done
--- Build files have been written to: /home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src
