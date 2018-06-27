@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SOAPnuke"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SOAPnuke">
+				<Option output="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/SOAPnuke" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 SOAPnuke"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SOAPnuke/fast">
+				<Option output="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/SOAPnuke" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 SOAPnuke/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Common.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Common.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/DGECommon.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/DGECommon.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/DGEProcessor.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/DGEProcessor.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/FilterProcessor.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/FilterProcessor.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/FqBuffer.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/FqBuffer.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/FqFile.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/FqFile.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Logger.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Logger.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/Main.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/MetaCommon.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/MetaCommon.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/MetaProcessor.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/MetaProcessor.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/PeBuffer.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/PeBuffer.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/SRNACleanFA.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/SRNACleanFQ.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/SRNACommon.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/SRNACommon.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/SRNAProcessor.cpp">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/SRNAProcessor.h">
+			<Option target="SOAPnuke"/>
+		</Unit>
+		<Unit filename="/home/chaos/projects/bgi_practice/SOAPnuke-bak/bgi_SOAPnuke/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
