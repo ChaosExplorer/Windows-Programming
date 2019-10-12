@@ -1,1 +1,0 @@
-/usr/bin/c++   -pg -lc -g -pthread -g   -pg -lc -g -rdynamic CMakeFiles/samhandler.dir/main.cpp.o  -o samhandler  -L/home/chaos/projects/programming-lib/samhandler/core -Wl,-rpath,/home/chaos/projects/programming-lib/samhandler/core core/libsamtoolcore.a 
