@@ -1,0 +1,6 @@
+/home/chaos/projects/programming-lib/samhandler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/chaos/projects/programming-lib/samhandler/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/chaos/projects/programming-lib/samhandler/cmake-build-debug/CMakeFiles/samhandler.dir
+/home/chaos/projects/programming-lib/samhandler/cmake-build-debug/core/CMakeFiles/edit_cache.dir
+/home/chaos/projects/programming-lib/samhandler/cmake-build-debug/core/CMakeFiles/rebuild_cache.dir
+/home/chaos/projects/programming-lib/samhandler/cmake-build-debug/core/CMakeFiles/samtoolcore.dir

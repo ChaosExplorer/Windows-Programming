@@ -1,0 +1,3 @@
+/home/chaos/projects/programming-lib/intern/SEGV/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/chaos/projects/programming-lib/intern/SEGV/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/chaos/projects/programming-lib/intern/SEGV/cmake-build-debug/CMakeFiles/segv_test.dir

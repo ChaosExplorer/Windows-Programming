@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsamtoolcore.a  CMakeFiles/samtoolcore.dir/Filter.cpp.o CMakeFiles/samtoolcore.dir/Repository.cpp.o CMakeFiles/samtoolcore.dir/SamReader.cpp.o CMakeFiles/samtoolcore.dir/SamWriter.cpp.o CMakeFiles/samtoolcore.dir/Sort.cpp.o
+/usr/bin/ranlib libsamtoolcore.a

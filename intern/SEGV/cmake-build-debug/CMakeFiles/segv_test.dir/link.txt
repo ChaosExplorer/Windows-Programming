@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -g   CMakeFiles/segv_test.dir/main.cpp.o  -o segv_test  -L/home/chaos/projects/bgi_gpu_server/lib -Wl,-rpath,/home/chaos/projects/bgi_gpu_server/lib -lbreakpad_client -lpthread 

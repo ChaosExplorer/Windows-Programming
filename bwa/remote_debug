@@ -1,0 +1,2 @@
+make
+scp bwa phoenix@phoenix_dev03:/usr/bgisoft/pmseq200/PMseq-V4.1.1/v4.1.1/bwa

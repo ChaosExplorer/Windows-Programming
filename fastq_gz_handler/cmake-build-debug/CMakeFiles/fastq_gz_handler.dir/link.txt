@@ -1,1 +1,0 @@
-/usr/bin/c++    -pg -pthread -g   -pg -lc CMakeFiles/fastq_gz_handler.dir/main.cpp.o CMakeFiles/fastq_gz_handler.dir/FastqHandler.cpp.o  -o fastq_gz_handler  -L/home/chaos/projects/bgi_practice/fastq_gz_handler/lib/zlib -lz -Wl,-rpath,/home/chaos/projects/bgi_practice/fastq_gz_handler/lib/zlib 

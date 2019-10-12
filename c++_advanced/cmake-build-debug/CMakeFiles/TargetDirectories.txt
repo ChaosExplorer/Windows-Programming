@@ -1,0 +1,3 @@
+/home/chaos/projects/programming-lib/c++_advanced/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/chaos/projects/programming-lib/c++_advanced/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/chaos/projects/programming-lib/c++_advanced/cmake-build-debug/CMakeFiles/c___advanced.dir
